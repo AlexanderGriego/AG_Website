@@ -1,6 +1,10 @@
 # This workflow uses actions that are not certified by GitHub. They are provided
 # by a third-party and are governed by separate terms of service, privacy
 # policy, and support documentation.
+permissions:
+  contents: read
+  security-events: write
+  id-token: write
 
 name: Scorecard supply-chain security
 on:
@@ -29,7 +33,7 @@ jobs:
       # Needed to publish results and get a badge (see publish_results below).
       id-token: write
       # Uncomment the permissions below if installing in a private repository.
-       contents: read
+      # contents: read
       # actions: read
 
     steps:
